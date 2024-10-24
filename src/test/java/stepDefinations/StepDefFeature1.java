@@ -9,7 +9,7 @@ public class StepDefFeature1 {
     }
     @When("enter the deatils in form")
     public void enter_the_deatils_in_form() {
-
+        System.out.println("second line");
     }
     @Then("click on submit button")
     public void click_on_submit_button() {
