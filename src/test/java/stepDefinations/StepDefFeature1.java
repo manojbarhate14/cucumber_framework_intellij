@@ -13,7 +13,7 @@ public class StepDefFeature1 {
     }
     @Then("click on submit button")
     public void click_on_submit_button() {
-
+        System.out.println("Third line");
     }
     @Then("verify the successfully {string} message and close the window")
     public void verify_the_successfully_message_and_close_the_window(String string) {
