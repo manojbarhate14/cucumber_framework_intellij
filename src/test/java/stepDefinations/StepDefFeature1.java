@@ -1,8 +1,26 @@
 package stepDefinations;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import utils.BaseClass;
+import utils.ConfigData;
+
+import java.io.IOException;
 
 public class StepDefFeature1 {
+    WebDriver driver;
+    BaseClass baseClass;
+    ConfigData config;
 
+    @Before
+    public void invokeBrowser() throws IOException {
+
+        if(config.redProp().getProperty("browserName").equalsIgnoreCase("chrome")) {
+            driver = WebDriverManager.chromedriver().create();
+        }
+        baseClass= new BaseClass(driver);
+    }
     @Given("user navigate to home page")
     public void user_navigate_to_home_page() {
         System.out.println("first line");
