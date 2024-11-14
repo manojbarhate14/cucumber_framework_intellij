@@ -1,8 +1,10 @@
 package stepDefinations;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import utils.BaseClass;
 import utils.ConfigData;
 
@@ -11,18 +13,23 @@ import java.io.IOException;
 public class StepDefFeature1 {
     WebDriver driver;
     BaseClass baseClass;
-    ConfigData config;
+    String WebTest = ConfigData.redProp().getProperty("WebTest");
+
+
+    public StepDefFeature1() throws IOException {
+    }
 
     @Before
-    public void invokeBrowser() throws IOException {
+    public void invokeBrowser() throws IOException
+    {
+     driver = ConfigData.invokeBrowser();
+     baseClass = new BaseClass(driver);
+     driver.get(WebTest);
 
-        if(config.redProp().getProperty("browserName").equalsIgnoreCase("chrome")) {
-            driver = WebDriverManager.chromedriver().create();
-        }
-        baseClass= new BaseClass(driver);
     }
     @Given("user navigate to home page")
     public void user_navigate_to_home_page() {
+        driver.get(WebTest);
         System.out.println("first line");
     }
     @When("enter the deatils in form")
@@ -37,4 +44,10 @@ public class StepDefFeature1 {
     public void verify_the_successfully_message_and_close_the_window(String string) {
 
     }
+    @After
+    public void tear_down()
+    {
+        driver.quit();
+    }
+
 }
