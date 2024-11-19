@@ -26,7 +26,6 @@ public class ConfigData {
     {
         String properties_browser = ConfigData.redProp().getProperty("browserName");
         String maven_browser = System.getProperty("browserName");
-
         //  result = test_condition ? value1 : value2       this is ternary operator in java
         String browser = maven_browser!=null ? maven_browser : properties_browser ;
 
@@ -46,5 +45,4 @@ public class ConfigData {
         }
         return driver;
     }
-
 }
