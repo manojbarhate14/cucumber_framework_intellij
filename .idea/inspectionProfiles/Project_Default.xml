@@ -7,18 +7,21 @@
         <list>
           <option value="cucumberFramework" />
           <option value="cucumberFramework" />
+          <option value="cucumberFramework" />
         </list>
       </option>
       <option name="ignoredPackages">
         <list>
           <option value="com.fasterxml.jackson.core:jackson-databind:2.10.3" />
           <option value="com.google.guava:guava:19.0" />
+          <option value="junit:junit:4.10" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
           <option value="Not exploitable" />
           <option value="In progress" />
+          <option value="Not exploitable" />
         </list>
       </option>
     </inspection_tool>
