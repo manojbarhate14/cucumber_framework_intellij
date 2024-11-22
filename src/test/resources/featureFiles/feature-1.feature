@@ -5,3 +5,6 @@ Feature: Automation testing practice with industrial manner
     When enter the deatils in form
     Then click on submit button
     And verify the successfully "Thanks for submitting the form" message and close the window
+
+  Scenario: hit GET request and verify
+    Given update the
