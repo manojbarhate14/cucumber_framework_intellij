@@ -11,6 +11,8 @@ public class TestClass {
                 .when().get("/public/v2/users/{users}")
                 .then().statusCode(200).log().all().extract().response();
 
+        System.out.println("git practice");
+
 
     }
 }
