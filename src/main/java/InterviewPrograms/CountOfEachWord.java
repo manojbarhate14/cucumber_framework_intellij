@@ -8,6 +8,7 @@ import java.util.Set;
 public class CountOfEachWord {
     public static void main(String[] args) {
         removeDuplicateWord();
+        eachWordCount();
     }
     public static void removeDuplicateWord()
     {

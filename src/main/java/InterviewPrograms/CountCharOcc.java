@@ -20,19 +20,19 @@ public class CountCharOcc {
     }
 
     public static void eachLetterCount(){
-        String str = "aabbccrrttt";
-        char[] arr = str.toCharArray();
+        String mainString  = "aabbccrrttt";
+        char[] arr = mainString.toCharArray();
 
         Map<Character, Integer> mp = new LinkedHashMap<>();
 
-        for (char str1 : arr) {
+        for (char loopOne : arr) {
             int count = 0;
-            for (char compareWord : arr) {
-                if (str1 == compareWord) {
+            for (char loopTwo : arr) {
+                if (loopOne == loopTwo) {
                     count++;
                 }
             }
-            mp.put(str1, count);
+            mp.put(loopOne, count);
         }
      //   System.out.println(mp);
         for(Map.Entry<Character, Integer> e: mp.entrySet())
