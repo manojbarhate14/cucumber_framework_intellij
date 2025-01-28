@@ -9,6 +9,4 @@ public class Practice {
 
         throw new io.cucumber.java.PendingException();
     }
-
-
 }

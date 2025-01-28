@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="3">
+    <test name="Grouping">
+        <groups>
+            <run>
+                <include name="sanity"></include>
+                <include name="smoke"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNG.ParallelTest_1"/>
+            <class name="TestNG.ParallelTest_2">
+            </class>
+        </classes>
+    </test>
+</suite>
