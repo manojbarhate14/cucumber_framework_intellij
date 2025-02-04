@@ -13,7 +13,6 @@ public class StepDefFeature1 {
     BaseClass baseClass;
     String WebTest = ConfigData.redProp().getProperty("WebTest");
 
-
     public StepDefFeature1() throws IOException {
     }
 
@@ -47,7 +46,4 @@ public class StepDefFeature1 {
     {
         driver.quit();
     }
-
-
-
 }

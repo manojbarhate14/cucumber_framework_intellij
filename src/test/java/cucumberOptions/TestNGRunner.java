@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions (
-        features = "src/test/resources/featureFiles/feature-1.feature",
+        features = "src/test/resources/featureFiles/practice.feature",
         glue = "stepDefinations",
         dryRun = false,
         monochrome = true,

@@ -2,12 +2,11 @@ package InterviewPrograms;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class CountCharOcc {
 
     public static void main(String[] args) {
-            //eachLetterCount();
+           // eachCharCount();
             specificLetterCount();
     }
     public static void specificLetterCount(){
@@ -15,12 +14,18 @@ public class CountCharOcc {
 
         //Subtracts the length of the string without "a" from the length of the original string.
 
-        int letter = str.length() - str.replaceAll("a","").length();
-        System.out.println(letter);
+        int strLength = str.length();
+        int without_a_length = str.replaceAll("a","").length();
+
+        System.out.println("Total length of str = "+strLength);
+        System.out.println("length of str without 'a' = "+without_a_length);
+
+        int a_count = strLength - without_a_length;
+        System.out.println("a count in str = "+a_count);
     }
 
-    public static void eachLetterCount(){
-        String mainString  = "aabbccrrttt";
+    public static void eachCharCount(){
+        String mainString  = "aabbccrrttta";
         char[] arr = mainString.toCharArray();
 
         Map<Character, Integer> mp = new LinkedHashMap<>();

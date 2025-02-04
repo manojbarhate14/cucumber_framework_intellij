@@ -5,11 +5,11 @@ import java.util.Set;
 
 public class RemoveDuplicateNumbers {
     public static void main(String[] args) {
-        RemoveDuplicateNumbers obj = new RemoveDuplicateNumbers();
-        obj.removeDuplicate();
+        removeDuplicate();
+        printUniqueElement();
     }
 
-    public void removeDuplicate() {
+    public static void removeDuplicate() {
         int arr[] = {10, 25, 13, 45, 12, 46, 12, 45, 25, 12, 48, 12};
         System.out.println("Print only duplicate");
         Set<Integer> unique = new LinkedHashSet<>();
@@ -25,7 +25,7 @@ public class RemoveDuplicateNumbers {
     }
     //================================================================================================
 
-    public void printUniqueElement() {
+    public static void printUniqueElement() {
         int arr[] = {10, 25, 13, 45, 12, 46, 12, 45, 25, 12, 48, 12};
 
         Set<Integer> seen = new LinkedHashSet<>();
