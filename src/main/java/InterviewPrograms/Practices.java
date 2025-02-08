@@ -1,8 +1,9 @@
 package InterviewPrograms;
 
-public class Practice2 {
+public class Practices {
 
     public static void main(String[] args) {
+
 
     }
 }

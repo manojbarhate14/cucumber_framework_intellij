@@ -9,5 +9,6 @@ public class PracticeForm {
     {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+
     }
 }
